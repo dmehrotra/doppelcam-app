@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A59BCCE1C9B24F700806960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59BCCD1C9B24F700806960 /* AppDelegate.swift */; };
+		9A59BCD01C9B24F700806960 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59BCCF1C9B24F700806960 /* ViewController.swift */; };
+		9A59BCD31C9B24F700806960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A59BCD11C9B24F700806960 /* Main.storyboard */; };
+		9A59BCD51C9B24F700806960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A59BCD41C9B24F700806960 /* Assets.xcassets */; };
+		9A59BCD81C9B24F700806960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A59BCD61C9B24F700806960 /* LaunchScreen.storyboard */; };
+		9A59BCE31C9B24F700806960 /* doppel_camTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59BCE21C9B24F700806960 /* doppel_camTests.swift */; };
+		9A59BCEE1C9B24F700806960 /* doppel_camUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59BCED1C9B24F700806960 /* doppel_camUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A59BCDF1C9B24F700806960 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A59BCC21C9B24F600806960 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A59BCC91C9B24F600806960;
+			remoteInfo = "doppel-cam";
+		};
+		9A59BCEA1C9B24F700806960 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A59BCC21C9B24F600806960 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A59BCC91C9B24F600806960;
+			remoteInfo = "doppel-cam";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9A59BCCA1C9B24F600806960 /* doppel-cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "doppel-cam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A59BCCD1C9B24F700806960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A59BCCF1C9B24F700806960 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A59BCD21C9B24F700806960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A59BCD41C9B24F700806960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A59BCD71C9B24F700806960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A59BCD91C9B24F700806960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A59BCDE1C9B24F700806960 /* doppel-camTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "doppel-camTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A59BCE21C9B24F700806960 /* doppel_camTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doppel_camTests.swift; sourceTree = "<group>"; };
+		9A59BCE41C9B24F700806960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A59BCE91C9B24F700806960 /* doppel-camUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "doppel-camUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A59BCED1C9B24F700806960 /* doppel_camUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doppel_camUITests.swift; sourceTree = "<group>"; };
+		9A59BCEF1C9B24F700806960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A59BCC71C9B24F600806960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A59BCDB1C9B24F700806960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A59BCE61C9B24F700806960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A59BCC11C9B24F600806960 = {
+			isa = PBXGroup;
+			children = (
+				9A59BCCC1C9B24F600806960 /* doppel-cam */,
+				9A59BCE11C9B24F700806960 /* doppel-camTests */,
+				9A59BCEC1C9B24F700806960 /* doppel-camUITests */,
+				9A59BCCB1C9B24F600806960 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A59BCCB1C9B24F600806960 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A59BCCA1C9B24F600806960 /* doppel-cam.app */,
+				9A59BCDE1C9B24F700806960 /* doppel-camTests.xctest */,
+				9A59BCE91C9B24F700806960 /* doppel-camUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A59BCCC1C9B24F600806960 /* doppel-cam */ = {
+			isa = PBXGroup;
+			children = (
+				9A59BCCD1C9B24F700806960 /* AppDelegate.swift */,
+				9A59BCCF1C9B24F700806960 /* ViewController.swift */,
+				9A59BCD11C9B24F700806960 /* Main.storyboard */,
+				9A59BCD41C9B24F700806960 /* Assets.xcassets */,
+				9A59BCD61C9B24F700806960 /* LaunchScreen.storyboard */,
+				9A59BCD91C9B24F700806960 /* Info.plist */,
+			);
+			path = "doppel-cam";
+			sourceTree = "<group>";
+		};
+		9A59BCE11C9B24F700806960 /* doppel-camTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A59BCE21C9B24F700806960 /* doppel_camTests.swift */,
+				9A59BCE41C9B24F700806960 /* Info.plist */,
+			);
+			path = "doppel-camTests";
+			sourceTree = "<group>";
+		};
+		9A59BCEC1C9B24F700806960 /* doppel-camUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9A59BCED1C9B24F700806960 /* doppel_camUITests.swift */,
+				9A59BCEF1C9B24F700806960 /* Info.plist */,
+			);
+			path = "doppel-camUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A59BCC91C9B24F600806960 /* doppel-cam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A59BCF21C9B24F700806960 /* Build configuration list for PBXNativeTarget "doppel-cam" */;
+			buildPhases = (
+				9A59BCC61C9B24F600806960 /* Sources */,
+				9A59BCC71C9B24F600806960 /* Frameworks */,
+				9A59BCC81C9B24F600806960 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "doppel-cam";
+			productName = "doppel-cam";
+			productReference = 9A59BCCA1C9B24F600806960 /* doppel-cam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A59BCDD1C9B24F700806960 /* doppel-camTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A59BCF51C9B24F700806960 /* Build configuration list for PBXNativeTarget "doppel-camTests" */;
+			buildPhases = (
+				9A59BCDA1C9B24F700806960 /* Sources */,
+				9A59BCDB1C9B24F700806960 /* Frameworks */,
+				9A59BCDC1C9B24F700806960 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A59BCE01C9B24F700806960 /* PBXTargetDependency */,
+			);
+			name = "doppel-camTests";
+			productName = "doppel-camTests";
+			productReference = 9A59BCDE1C9B24F700806960 /* doppel-camTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9A59BCE81C9B24F700806960 /* doppel-camUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A59BCF81C9B24F700806960 /* Build configuration list for PBXNativeTarget "doppel-camUITests" */;
+			buildPhases = (
+				9A59BCE51C9B24F700806960 /* Sources */,
+				9A59BCE61C9B24F700806960 /* Frameworks */,
+				9A59BCE71C9B24F700806960 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A59BCEB1C9B24F700806960 /* PBXTargetDependency */,
+			);
+			name = "doppel-camUITests";
+			productName = "doppel-camUITests";
+			productReference = 9A59BCE91C9B24F700806960 /* doppel-camUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A59BCC21C9B24F600806960 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Dhruv;
+				TargetAttributes = {
+					9A59BCC91C9B24F600806960 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					9A59BCDD1C9B24F700806960 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 9A59BCC91C9B24F600806960;
+					};
+					9A59BCE81C9B24F700806960 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 9A59BCC91C9B24F600806960;
+					};
+				};
+			};
+			buildConfigurationList = 9A59BCC51C9B24F600806960 /* Build configuration list for PBXProject "doppel-cam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A59BCC11C9B24F600806960;
+			productRefGroup = 9A59BCCB1C9B24F600806960 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A59BCC91C9B24F600806960 /* doppel-cam */,
+				9A59BCDD1C9B24F700806960 /* doppel-camTests */,
+				9A59BCE81C9B24F700806960 /* doppel-camUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A59BCC81C9B24F600806960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A59BCD81C9B24F700806960 /* LaunchScreen.storyboard in Resources */,
+				9A59BCD51C9B24F700806960 /* Assets.xcassets in Resources */,
+				9A59BCD31C9B24F700806960 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A59BCDC1C9B24F700806960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A59BCE71C9B24F700806960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A59BCC61C9B24F600806960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A59BCD01C9B24F700806960 /* ViewController.swift in Sources */,
+				9A59BCCE1C9B24F700806960 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A59BCDA1C9B24F700806960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A59BCE31C9B24F700806960 /* doppel_camTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A59BCE51C9B24F700806960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A59BCEE1C9B24F700806960 /* doppel_camUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A59BCE01C9B24F700806960 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A59BCC91C9B24F600806960 /* doppel-cam */;
+			targetProxy = 9A59BCDF1C9B24F700806960 /* PBXContainerItemProxy */;
+		};
+		9A59BCEB1C9B24F700806960 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A59BCC91C9B24F600806960 /* doppel-cam */;
+			targetProxy = 9A59BCEA1C9B24F700806960 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A59BCD11C9B24F700806960 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A59BCD21C9B24F700806960 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9A59BCD61C9B24F700806960 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A59BCD71C9B24F700806960 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A59BCF01C9B24F700806960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9A59BCF11C9B24F700806960 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A59BCF31C9B24F700806960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "doppel-cam/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.dhruvmehrotra.doppel-cam";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9A59BCF41C9B24F700806960 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "doppel-cam/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.dhruvmehrotra.doppel-cam";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9A59BCF61C9B24F700806960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "doppel-camTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.dhruvmehrotra.doppel-camTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/doppel-cam.app/doppel-cam";
+			};
+			name = Debug;
+		};
+		9A59BCF71C9B24F700806960 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "doppel-camTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.dhruvmehrotra.doppel-camTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/doppel-cam.app/doppel-cam";
+			};
+			name = Release;
+		};
+		9A59BCF91C9B24F700806960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "doppel-camUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.dhruvmehrotra.doppel-camUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "doppel-cam";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9A59BCFA1C9B24F700806960 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "doppel-camUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.dhruvmehrotra.doppel-camUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "doppel-cam";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A59BCC51C9B24F600806960 /* Build configuration list for PBXProject "doppel-cam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A59BCF01C9B24F700806960 /* Debug */,
+				9A59BCF11C9B24F700806960 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A59BCF21C9B24F700806960 /* Build configuration list for PBXNativeTarget "doppel-cam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A59BCF31C9B24F700806960 /* Debug */,
+				9A59BCF41C9B24F700806960 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9A59BCF51C9B24F700806960 /* Build configuration list for PBXNativeTarget "doppel-camTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A59BCF61C9B24F700806960 /* Debug */,
+				9A59BCF71C9B24F700806960 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9A59BCF81C9B24F700806960 /* Build configuration list for PBXNativeTarget "doppel-camUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A59BCF91C9B24F700806960 /* Debug */,
+				9A59BCFA1C9B24F700806960 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A59BCC21C9B24F600806960 /* Project object */;
+}
