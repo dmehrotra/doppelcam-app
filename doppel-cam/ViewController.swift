@@ -61,7 +61,58 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if (newMedia == true) {
             UIImageWriteToSavedPhotosAlbum(image, self, "image:didFinishSavingWithError:contextInfo:", nil)
         }
+        upload(image)
+    }
+    
+    
+    
+    func upload(image: UIImage){
         
+        let request = NSMutableURLRequest(URL: NSURL(string:"http://localhost:3000/app/api/photo")!);
+        let session = NSURLSession.sharedSession()
+       
+        request.HTTPMethod = "POST";
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        
+        request.setValue("superspecial", forHTTPHeaderField: "bar")
+
+        
+        
+        let imageData = UIImageJPEGRepresentation(image, 0.9)
+
+        let base64String = imageData!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0));
+
+        
+        let params = ["image":[ "content_type": "image/jpeg", "filename":"test.jpg", "file_data": base64String]]
+        
+        
+        do {
+            let message = try request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions(rawValue: 0))
+         
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+
+        print("request.HTTPBody:")
+        
+        let task = session.dataTaskWithRequest(request, completionHandler: { data, response, error in
+            
+            print("error:")
+            print(error)
+            
+            let strData = NSString(data: data!, encoding: NSUTF8StringEncoding);
+            print("we're complete: ")
+            print(strData);
+            
+            
+            
+            
+            
+            // process the response
+        })
+        task.resume() // this is needed to start the task
+    
     }
     func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo:UnsafePointer<Void>) {
         
