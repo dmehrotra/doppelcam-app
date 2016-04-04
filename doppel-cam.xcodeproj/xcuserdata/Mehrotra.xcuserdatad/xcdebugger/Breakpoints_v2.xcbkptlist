@@ -10,11 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "doppel-cam/ViewController.swift"
-            timestampString = "480807094.759102"
+            timestampString = "481424519.44994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133">
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "imagePickerControllerDidCancel(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -136,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "doppel-cam/ViewController.swift"
-            timestampString = "480807094.759102"
+            timestampString = "481424519.44994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "upload(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -175,38 +177,6 @@
             endingLineNumber = "106"
             landmarkName = "upload(_:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "doppel_cam.ViewController.upload (doppel_cam.ViewController)(__ObjC.UIImage) -&gt; ()"
-                  moduleName = "doppel-cam"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Mehrotra/projects/doppel-cam/doppel-cam/ViewController.swift"
-                  timestampString = "480800699.243644"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "1180">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "doppel_cam.ViewController.(upload (doppel_cam.ViewController) -&gt; (__ObjC.UIImage) -&gt; ()).(closure #1)"
-                  moduleName = "doppel-cam"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Mehrotra/projects/doppel-cam/doppel-cam/ViewController.swift"
-                  timestampString = "480800699.243841"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "30">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -216,59 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "doppel-cam/ViewController.swift"
-            timestampString = "480807094.759102"
+            timestampString = "481423859.815606"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "upload(_:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "doppel_cam.ViewController.upload (doppel_cam.ViewController)(__ObjC.UIImage) -&gt; ()"
-                  moduleName = "doppel-cam"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Mehrotra/projects/doppel-cam/doppel-cam/ViewController.swift"
-                  timestampString = "480800753.184514"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "1066">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "doppel_cam.ViewController.(upload (doppel_cam.ViewController) -&gt; (__ObjC.UIImage) -&gt; ()).(closure #1)"
-                  moduleName = "doppel-cam"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Mehrotra/projects/doppel-cam/doppel-cam/ViewController.swift"
-                  timestampString = "480800753.184818"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "30">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "doppel-cam/ViewController.swift"
-            timestampString = "480807094.759102"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "upload(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -317,6 +239,86 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
+            landmarkName = "upload(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "doppel-cam/ViewController.swift"
+            timestampString = "481423234.708876"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "upload(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "doppel-cam/ViewController.swift"
+            timestampString = "481423235.180949"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "upload(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "doppel_cam.ViewController.upload (doppel_cam.ViewController)(__ObjC.UIImage) -&gt; ()"
+                  moduleName = "doppel-cam"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mehrotra/projects/doppel-cam/doppel-cam/ViewController.swift"
+                  timestampString = "481423879.881201"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "2366">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "doppel_cam.ViewController.(upload (doppel_cam.ViewController) -&gt; (__ObjC.UIImage) -&gt; ()).(closure #1)"
+                  moduleName = "doppel-cam"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mehrotra/projects/doppel-cam/doppel-cam/ViewController.swift"
+                  timestampString = "481423879.881483"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "doppel-cam/ViewController.swift"
+            timestampString = "481423881.703279"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "upload(_:)"
             landmarkType = "5">
          </BreakpointContent>

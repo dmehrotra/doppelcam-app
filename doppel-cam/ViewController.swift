@@ -101,19 +101,45 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("error:")
             print(error)
             
-            let strData = NSString(data: data!, encoding: NSUTF8StringEncoding);
+            let strData = String(data: data!, encoding: NSUTF8StringEncoding);
             print("we're complete: ")
-            print(strData);
+            // convert string to json
+            let dictionary = self.convertStringToDictionary(strData!);
+            // if there is a url property do this:
+            if let url = dictionary?["url"]{
+                print(url);
+                // go to the url
+                if let img_url = NSURL(string: url) {
+                    if let img_data = NSData(contentsOfURL: img_url) {
+                        //print the original image just cuz im curious
+                        //make imageview container's image the returned image from server;
+                        // It needs to be placed inside a different thread that allows the UI to update:
+                        dispatch_async(dispatch_get_main_queue(), {
+                             self.imageView.image = UIImage(data: img_data)
+                        })
+                       
+                    }        
+                }
+            }
             
-            
-            
-            
-            
-            // process the response
         })
         task.resume() // this is needed to start the task
     
     }
+    func convertStringToDictionary(text: String) -> [String:String]? {
+      
+        if let data = text.dataUsingEncoding(NSUTF8StringEncoding) {
+            do{
+                let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions()) as? [String:String]
+                return json;
+            }catch let error as NSError{
+                print(error.localizedDescription);
+            }
+            
+        }
+        return nil
+    }
+    
     func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo:UnsafePointer<Void>) {
         
         if error != nil {
