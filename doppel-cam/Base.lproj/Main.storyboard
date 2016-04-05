@@ -29,6 +29,23 @@
                                             <action selector="useCameraRoll:" destination="dkx-z0-nzr" id="uaP-W4-HfG"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Refresh" id="2Qe-i6-wSS"/>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G7n-5o-FHq">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Camera" id="Y7R-rF-aHD"/>
+                                    <barButtonItem title="Camera Roll" id="mAT-Jq-3wv">
+                                        <connections>
+                                            <action selector="useCameraRoll:" destination="dkx-z0-nzr" id="prr-0K-Qbd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Refresh" id="pxN-xs-e7x">
+                                        <connections>
+                                            <action selector="refresh:" destination="BYZ-38-t0r" id="zQt-vD-hDq"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

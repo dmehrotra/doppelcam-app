@@ -13,6 +13,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var imageView: UIImageView!
     var newMedia: Bool?
     
+    @IBAction func refresh(sender: AnyObject) {
+    
+        
+        imageView.image = nil;
+        
+    }
     @IBAction func useCamera(sender: AnyObject) {
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
