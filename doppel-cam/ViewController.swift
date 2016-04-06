@@ -7,11 +7,47 @@
 //
 
 import UIKit
+import AVFoundation
 import MobileCoreServices
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var imageView: UIImageView!
     var newMedia: Bool?
+    
+    
+    let camera = AVCaptureSession();
+    var device : AVCaptureDevice?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        camera.sessionPreset = AVCaptureSessionPresetLow
+        let devices = AVCaptureDevice.devices()
+        
+        for d in devices {
+            if (d.hasMediaType(AVMediaTypeVideo)){
+                if(d.position == AVCaptureDevicePosition.Back){
+                    device = d as? AVCaptureDevice;
+                }
+            }
+        }
+        if device != nil {
+            beginSession();
+        }
+    }
+    
+    func beginSession(){
+     
+        do {
+            try camera.addInput(AVCaptureDeviceInput(device:device));
+        }catch let error as NSError{
+            print(error);
+        }
+        
+        let previewLayer = AVCaptureVideoPreviewLayer(session: camera); 
+        self.view.layer.addSublayer(previewLayer);
+        previewLayer?.frame = self.view.layer.frame
+        camera.startRunning();
+    }
     
     @IBAction func refresh(sender: AnyObject) {
     
@@ -46,10 +82,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         newMedia = false;
     
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

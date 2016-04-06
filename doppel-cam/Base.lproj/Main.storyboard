@@ -16,48 +16,13 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vw8-fe-hlx">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                            </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L14-sV-QKi">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem title="Camera" id="ykH-Ya-8dl"/>
-                                    <barButtonItem title="Camera Roll" id="QPh-E8-cnp">
-                                        <connections>
-                                            <action selector="useCameraRoll:" destination="dkx-z0-nzr" id="uaP-W4-HfG"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Refresh" id="2Qe-i6-wSS"/>
-                                </items>
-                            </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G7n-5o-FHq">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem title="Camera" id="Y7R-rF-aHD"/>
-                                    <barButtonItem title="Camera Roll" id="mAT-Jq-3wv">
-                                        <connections>
-                                            <action selector="useCameraRoll:" destination="dkx-z0-nzr" id="prr-0K-Qbd"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Refresh" id="pxN-xs-e7x">
-                                        <connections>
-                                            <action selector="refresh:" destination="BYZ-38-t0r" id="zQt-vD-hDq"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="imageView" destination="vw8-fe-hlx" id="hPX-N5-rOF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="127" y="215"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
