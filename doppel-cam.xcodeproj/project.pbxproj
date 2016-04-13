@@ -22,6 +22,7 @@
 		E3CFC5EF1CBE845D00E6C35F /* noflash.png in Resources */ = {isa = PBXBuildFile; fileRef = E3CFC5E91CBE845D00E6C35F /* noflash.png */; };
 		E3CFC5F01CBE845D00E6C35F /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = E3CFC5EA1CBE845D00E6C35F /* refresh.png */; };
 		E3CFC5F11CBE845D00E6C35F /* share-01.png in Resources */ = {isa = PBXBuildFile; fileRef = E3CFC5EB1CBE845D00E6C35F /* share-01.png */; };
+		E3CFC5F71CBE918A00E6C35F /* photogallery.png in Resources */ = {isa = PBXBuildFile; fileRef = E3CFC5F61CBE918A00E6C35F /* photogallery.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		E3CFC5E91CBE845D00E6C35F /* noflash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noflash.png; sourceTree = "<group>"; };
 		E3CFC5EA1CBE845D00E6C35F /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		E3CFC5EB1CBE845D00E6C35F /* share-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-01.png"; sourceTree = "<group>"; };
+		E3CFC5F61CBE918A00E6C35F /* photogallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photogallery.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				E3CFC5E81CBE845D00E6C35F /* loading_gif.gif */,
 				E3CFC5E91CBE845D00E6C35F /* noflash.png */,
 				E3CFC5EA1CBE845D00E6C35F /* refresh.png */,
+				E3CFC5F61CBE918A00E6C35F /* photogallery.png */,
 				E3CFC5EB1CBE845D00E6C35F /* share-01.png */,
 				9A59BCD41C9B24F700806960 /* Assets.xcassets */,
 				9A59BCD61C9B24F700806960 /* LaunchScreen.storyboard */,
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3CFC5F11CBE845D00E6C35F /* share-01.png in Resources */,
+				E3CFC5F71CBE918A00E6C35F /* photogallery.png in Resources */,
 				E3CFC5ED1CBE845D00E6C35F /* flash.png in Resources */,
 				9A59BCD81C9B24F700806960 /* LaunchScreen.storyboard in Resources */,
 				E3CFC5EC1CBE845D00E6C35F /* compare.png in Resources */,

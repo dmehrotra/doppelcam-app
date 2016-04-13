@@ -27,16 +27,33 @@
                                 <rect key="frame" x="505" y="10" width="104" height="50"/>
                                 <state key="normal" image="switchCam.png"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mq-Pr-ijs">
+                                <rect key="frame" x="20" y="538" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="zHg-vM-ATx"/>
+                                </constraints>
+                                <state key="normal" image="photogallery.png"/>
+                                <connections>
+                                    <action selector="useCameraRol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o1h-9R-qA9"/>
+                                    <action selector="useCameraRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JVA-Uw-SIW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VE-kS-Hak">
+                                <rect key="frame" x="20" y="16" width="35" height="37"/>
+                                <state key="normal" image="noflash.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="215"/>
+            <point key="canvasLocation" x="109" y="169"/>
         </scene>
     </scenes>
     <resources>
+        <image name="noflash.png" width="144" height="151"/>
+        <image name="photogallery.png" width="161" height="161"/>
         <image name="shutter.png" width="71" height="80"/>
         <image name="switchCam.png" width="50" height="50"/>
     </resources>

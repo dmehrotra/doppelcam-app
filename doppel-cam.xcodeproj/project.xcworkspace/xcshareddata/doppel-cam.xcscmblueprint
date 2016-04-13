@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "974D5597EFBD1B22F3BA9CF2E42B5B473B516C73",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "63D1344A104C925151F9278A902590543BCEC474" : 0,
+    "974D5597EFBD1B22F3BA9CF2E42B5B473B516C73" : 0,
+    "3CF52DEFF9DADE23746B600CB31A72A65EFBCDB0" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B9171888-69B6-44B4-9B0A-1FA4CCB8EE02",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "63D1344A104C925151F9278A902590543BCEC474" : "old-code-backups\/doppelcam-1.1\/",
+    "974D5597EFBD1B22F3BA9CF2E42B5B473B516C73" : "doppelcam-app\/",
+    "3CF52DEFF9DADE23746B600CB31A72A65EFBCDB0" : "old-code-backups\/image_upload%20old\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "doppel-cam",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "doppel-cam.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dmehrotra\/image_upload.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3CF52DEFF9DADE23746B600CB31A72A65EFBCDB0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:melaniehoff\/doppelcam.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "63D1344A104C925151F9278A902590543BCEC474"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dmehrotra\/doppelcam-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "974D5597EFBD1B22F3BA9CF2E42B5B473B516C73"
+    }
+  ]
+}
