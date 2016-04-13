@@ -83,7 +83,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         newMedia = false;
     
     }
-
+ 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
