@@ -23,4 +23,6 @@ class Compare:UIViewController{
         chosenPic.image = chosenImage
     }
     
+    
+    
 }

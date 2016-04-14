@@ -43,12 +43,21 @@
                                 <rect key="frame" x="76" y="79" width="449" height="363"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bA-Gg-hvr">
-                                <rect key="frame" x="173" y="474" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="165" y="474" width="63" height="30"/>
+                                <state key="normal" title="Compare">
                                     <color key="titleColor" red="0.99146052175271993" green="1" blue="0.98189999985353282" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="SQJ-Bq-HjM" kind="show" animates="NO" id="HTM-xo-O3d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZO-If-sWT">
+                                <rect key="frame" x="183" y="524" width="49" height="30"/>
+                                <state key="normal" title="refresh">
+                                    <color key="titleColor" red="0.0" green="0.76848014714241897" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6PC-4h-U05"/>
                                 </connections>
                             </button>
                         </subviews>

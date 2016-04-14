@@ -56,9 +56,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func refresh(sender: AnyObject) {
-    
+        pickedImage = UIImage()
+        imageView.image = nil
         
-        imageView.image = nil;
+        viewDidLoad()
+        
         
     }
     @IBAction func useCamera(sender: AnyObject) {
