@@ -27,29 +27,70 @@
                                 <rect key="frame" x="505" y="10" width="104" height="50"/>
                                 <state key="normal" image="switchCam.png"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mq-Pr-ijs">
-                                <rect key="frame" x="20" y="538" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="zHg-vM-ATx"/>
-                                </constraints>
-                                <state key="normal" image="photogallery.png"/>
-                                <connections>
-                                    <action selector="useCameraRol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RqS-nl-I2X"/>
-                                    <action selector="useCameraRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Onc-Y7-Apd"/>
-                                    <action selector="useCameraRoll:" destination="dkx-z0-nzr" eventType="touchUpInside" id="YrM-gy-5zn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VE-kS-Hak">
                                 <rect key="frame" x="20" y="16" width="35" height="37"/>
                                 <state key="normal" image="noflash.png"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyY-vk-o3V">
+                                <rect key="frame" x="20" y="505" width="75" height="87"/>
+                                <state key="normal" image="photogallery.png"/>
+                                <connections>
+                                    <action selector="useCameraRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dl4-E6-Qi2"/>
+                                    <action selector="useCameraRoll:" destination="dkx-z0-nzr" eventType="touchUpInside" id="QmG-OJ-iok"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8h9-C0-O1o">
+                                <rect key="frame" x="76" y="79" width="449" height="363"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bA-Gg-hvr">
+                                <rect key="frame" x="173" y="474" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.99146052175271993" green="1" blue="0.98189999985353282" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SQJ-Bq-HjM" kind="show" animates="NO" id="HTM-xo-O3d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="8h9-C0-O1o" id="oii-nx-6JG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109" y="169"/>
+            <point key="canvasLocation" x="-231" y="-289"/>
+        </scene>
+        <!--Compare-->
+        <scene sceneID="3VW-hE-hGi">
+            <objects>
+                <viewController id="SQJ-Bq-HjM" customClass="Compare" customModule="doppel_cam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6uU-VK-Q58"/>
+                        <viewControllerLayoutGuide type="bottom" id="gm3-ZJ-ipj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Pc-sk-N50">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Gw-J6-68X">
+                                <rect key="frame" x="20" y="43" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JNt-OM-xPu">
+                                <rect key="frame" x="41" y="334" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="chosenPic" destination="JNt-OM-xPu" id="Qto-ee-tpX"/>
+                        <outlet property="doppelPic" destination="6Gw-J6-68X" id="67Q-5g-UBB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1d-Vk-7pl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217" y="580"/>
         </scene>
     </scenes>
     <resources>

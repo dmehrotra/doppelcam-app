@@ -12,6 +12,7 @@ import MobileCoreServices
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var imageView: UIImageView!
+    var pickedImage = UIImage()
     var newMedia: Bool?
     
     
@@ -35,6 +36,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    
+
+ 
+    
+    
     func beginSession(){
      
         do {
@@ -43,7 +49,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print(error);
         }
         
-        let previewLayer = AVCaptureVideoPreviewLayer(session: camera); 
+        let previewLayer = AVCaptureVideoPreviewLayer(session: camera);
         self.view.layer.addSublayer(previewLayer);
         previewLayer?.frame = self.view.layer.frame
         camera.startRunning();
@@ -95,7 +101,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.dismissViewControllerAnimated(true, completion: nil)
         
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
+        pickedImage = image
         imageView.image = image
             
         if (newMedia == true) {
@@ -155,7 +161,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         //make imageview container's image the returned image from server;
                         // It needs to be placed inside a different thread that allows the UI to update:
                         dispatch_async(dispatch_get_main_queue(), {
-                             self.imageView.image = UIImage(data: img_data)
+
+                            self.imageView.image = UIImage(data: img_data)
                         })
                        
                     }        
@@ -197,6 +204,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let DestViewController : Compare = segue.destinationViewController as! Compare
+        
+        DestViewController.doppelImage = self.imageView.image!
+    
+        DestViewController.chosenImage = pickedImage
+    
     }
 }
 
