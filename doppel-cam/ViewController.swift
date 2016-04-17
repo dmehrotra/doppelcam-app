@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var imageView: UIImageView!
     var pickedImage = UIImage()
     var newMedia: Bool?
-    
+    var stillImageOutput = AVCaptureStillImageOutput()
     
     let camera = AVCaptureSession();
     var device : AVCaptureDevice?
@@ -64,19 +64,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     @IBAction func useCamera(sender: AnyObject) {
+     
+        stillImageOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
+        camera.addOutput(stillImageOutput)
         
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
-            
-            let picker = UIImagePickerController()
-            picker.delegate = self
-            picker.sourceType = .Camera
-            
-            self.presentViewController(picker, animated: true,
-                completion: nil)
-        
-        
-            newMedia = true;
-            
+        if let videoConnection = stillImageOutput.connectionWithMediaType(AVMediaTypeVideo){
+            stillImageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {
+                (sampleBuffer, error) in
+                let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
+                let image = UIImage(data: imageData,scale:1.0)
+                let imageView = UIImageView(image: image)
+              
+                
+                //Show the captured image to
+                self.view.addSubview(imageView)
+                
+                //Save the captured preview to image
+                UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+                
+            })
         }
         
         
