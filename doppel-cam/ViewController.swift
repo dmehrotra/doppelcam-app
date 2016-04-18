@@ -52,36 +52,54 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let previewLayer = AVCaptureVideoPreviewLayer(session: camera);
         self.view.layer.addSublayer(previewLayer);
         previewLayer?.frame = self.view.layer.frame
+        previewLayer?.zPosition = -1
+        stillImageOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
+        if camera.canAddOutput(stillImageOutput) {
+            camera.addOutput(stillImageOutput)
+        }
         camera.startRunning();
     }
     
-    @IBAction func refresh(sender: AnyObject) {
+    func refresh() {
         pickedImage = UIImage()
         imageView.image = nil
+        camera.sessionPreset = AVCaptureSessionPresetLow
+        let devices = AVCaptureDevice.devices()
         
-        viewDidLoad()
+        for d in devices {
+            if (d.hasMediaType(AVMediaTypeVideo)){
+                if(d.position == AVCaptureDevicePosition.Back){
+                    device = d as? AVCaptureDevice;
+                }
+            }
+        }
+        if device != nil {
+            beginSession();
+        }
+
+
         
         
     }
     @IBAction func useCamera(sender: AnyObject) {
-     
-        stillImageOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
-        camera.addOutput(stillImageOutput)
         
+    
         if let videoConnection = stillImageOutput.connectionWithMediaType(AVMediaTypeVideo){
             stillImageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {
                 (sampleBuffer, error) in
                 let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                 let image = UIImage(data: imageData,scale:1.0)
-                let imageView = UIImageView(image: image)
-              
-                
-                //Show the captured image to
-                self.view.addSubview(imageView)
-                
+                self.pickedImage = image!
+                self.imageView.image = image!
                 //Save the captured preview to image
-                UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
-                
+                //UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+                self.camera.stopRunning()
+
+
+                self.upload(image!)
+             
+            
+            
             })
         }
         
@@ -122,7 +140,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func upload(image: UIImage){
         
-        let request = NSMutableURLRequest(URL: NSURL(string:"http://localhost:3000/app/api/photo")!);
+        let request = NSMutableURLRequest(URL: NSURL(string:"https://doppel.camera/app/api/photo")!);
         let session = NSURLSession.sharedSession()
        
         request.HTTPMethod = "POST";

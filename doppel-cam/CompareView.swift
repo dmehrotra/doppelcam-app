@@ -23,6 +23,14 @@ class Compare:UIViewController{
         chosenPic.image = chosenImage
     }
     
-    
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let DestViewController : ViewController = segue.destinationViewController as! ViewController
+        
+        DestViewController.pickedImage = UIImage()
+        DestViewController.imageView.image = nil
+
+        
+    }
+ 
 }
