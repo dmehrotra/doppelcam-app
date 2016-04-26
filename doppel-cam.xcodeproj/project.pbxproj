@@ -18,6 +18,7 @@
 		9AE3631B1CBE93C8008DD539 /* switchCam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AE3631A1CBE93C8008DD539 /* switchCam.png */; };
 		9AE3631D1CBE93CF008DD539 /* shutter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AE3631C1CBE93CF008DD539 /* shutter.png */; };
 		E3B1F4A31CC433E000AC01A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B1F4A21CC433E000AC01A1 /* Images.xcassets */; };
+		E3B1F4A51CD0160700AC01A1 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = E3B1F4A41CD0160600AC01A1 /* camera.png */; };
 		E3CFC5EC1CBE845D00E6C35F /* compare.png in Resources */ = {isa = PBXBuildFile; fileRef = E3CFC5E61CBE845D00E6C35F /* compare.png */; };
 		E3CFC5ED1CBE845D00E6C35F /* flash.png in Resources */ = {isa = PBXBuildFile; fileRef = E3CFC5E71CBE845D00E6C35F /* flash.png */; };
 		E3CFC5EE1CBE845D00E6C35F /* loading_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = E3CFC5E81CBE845D00E6C35F /* loading_gif.gif */; };
@@ -62,6 +63,7 @@
 		9AE3631A1CBE93C8008DD539 /* switchCam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switchCam.png; sourceTree = "<group>"; };
 		9AE3631C1CBE93CF008DD539 /* shutter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shutter.png; sourceTree = "<group>"; };
 		E3B1F4A21CC433E000AC01A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E3B1F4A41CD0160600AC01A1 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		E3CFC5E61CBE845D00E6C35F /* compare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compare.png; sourceTree = "<group>"; };
 		E3CFC5E71CBE845D00E6C35F /* flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flash.png; sourceTree = "<group>"; };
 		E3CFC5E81CBE845D00E6C35F /* loading_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading_gif.gif; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				9AA526EC1CC02350007EDC65 /* CompareView.swift */,
 				9A59BCD11C9B24F700806960 /* Main.storyboard */,
 				E3CFC5E61CBE845D00E6C35F /* compare.png */,
+				E3B1F4A41CD0160600AC01A1 /* camera.png */,
 				E3CFC5E71CBE845D00E6C35F /* flash.png */,
 				E3CFC5E81CBE845D00E6C35F /* loading_gif.gif */,
 				E3CFC5E91CBE845D00E6C35F /* noflash.png */,
@@ -271,6 +274,7 @@
 				9A59BCD81C9B24F700806960 /* LaunchScreen.storyboard in Resources */,
 				E3CFC5EC1CBE845D00E6C35F /* compare.png in Resources */,
 				9A59BCD51C9B24F700806960 /* Assets.xcassets in Resources */,
+				E3B1F4A51CD0160700AC01A1 /* camera.png in Resources */,
 				E3CFC5EE1CBE845D00E6C35F /* loading_gif.gif in Resources */,
 				9AE3631B1CBE93C8008DD539 /* switchCam.png in Resources */,
 				E3CFC5EF1CBE845D00E6C35F /* noflash.png in Resources */,
@@ -441,7 +445,8 @@
 		9A59BCF31C9B24F700806960 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "doppel-cam/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -453,7 +458,8 @@
 		9A59BCF41C9B24F700806960 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "doppel-cam/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

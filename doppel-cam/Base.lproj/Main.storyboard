@@ -17,15 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJL-Qn-RKN">
-                                <rect key="frame" x="157" y="598" width="61" height="68"/>
-                                <state key="normal" image="shutter.png">
-                                    <color key="titleColor" red="0.95120936211093765" green="1" blue="0.96198871358701066" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="useCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ANB-gW-aSe"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yg5-eM-xYw">
                                 <rect key="frame" x="505" y="10" width="104" height="50"/>
                                 <state key="normal" image="switchCam.png"/>
@@ -35,7 +26,7 @@
                                 <state key="normal" image="noflash.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyY-vk-o3V">
-                                <rect key="frame" x="11" y="621" width="44" height="40"/>
+                                <rect key="frame" x="11" y="618" width="44" height="40"/>
                                 <state key="normal" image="photogallery.png"/>
                                 <connections>
                                     <action selector="useCameraRoll:" destination="dkx-z0-nzr" eventType="touchUpInside" id="QmG-OJ-iok"/>
@@ -43,24 +34,33 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8h9-C0-O1o">
-                                <rect key="frame" x="0.0" y="63" width="375" height="507"/>
+                                <rect key="frame" x="0.0" y="78" width="375" height="507"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZO-If-sWT">
-                                <rect key="frame" x="63" y="621" width="37" height="38"/>
-                                <state key="normal" title="refresh" image="refresh.png">
+                                <rect key="frame" x="63" y="617" width="40" height="42"/>
+                                <state key="normal" title="refresh" image="camera.png">
                                     <color key="titleColor" red="0.0" green="0.76848014714241897" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6PC-4h-U05"/>
+                                    <action selector="refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mok-Te-frn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bA-Gg-hvr">
-                                <rect key="frame" x="313" y="627" width="51" height="32"/>
+                                <rect key="frame" x="306" y="620" width="58" height="37"/>
                                 <state key="normal" image="compare.png">
                                     <color key="titleColor" red="0.99146052175271993" green="1" blue="0.98189999985353282" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="SQJ-Bq-HjM" kind="show" animates="NO" id="HTM-xo-O3d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJL-Qn-RKN">
+                                <rect key="frame" x="154" y="586" width="66" height="73"/>
+                                <state key="normal" image="shutter.png">
+                                    <color key="titleColor" red="0.95120936211093765" green="1" blue="0.96198871358701066" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="useCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ANB-gW-aSe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162.5" y="-253.5"/>
+            <point key="canvasLocation" x="-43.5" y="-206.5"/>
         </scene>
         <!--Compare-->
         <scene sceneID="3VW-hE-hGi">
@@ -88,17 +88,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Gw-J6-68X">
-                                <rect key="frame" x="181" y="198" width="194" height="324"/>
+                                <rect key="frame" x="186" y="198" width="189" height="324"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JNt-OM-xPu">
-                                <rect key="frame" x="0.0" y="198" width="180" height="324"/>
+                                <rect key="frame" x="0.0" y="198" width="183" height="324"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUT-fw-IR7">
-                                <rect key="frame" x="154" y="571" width="66" height="63"/>
-                                <state key="normal" image="refresh.png"/>
+                                <rect key="frame" x="154" y="568" width="66" height="63"/>
+                                <state key="normal" image="camera.png"/>
                                 <connections>
-                                    <action selector="refresh:" destination="SQJ-Bq-HjM" eventType="touchUpInside" id="NbW-uj-cuZ"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="T7k-5X-D0A"/>
+                                    <segue destination="sb9-Ss-H0s" kind="unwind" unwindAction="unwindToVC:" id="zsO-sv-5dW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,15 +109,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1d-Vk-7pl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sb9-Ss-H0s" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="425.5" y="-270.5"/>
+            <point key="canvasLocation" x="409.5" y="-256.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="camera.png" width="200" height="200"/>
         <image name="compare.png" width="90" height="66"/>
         <image name="noflash.png" width="144" height="151"/>
         <image name="photogallery.png" width="161" height="161"/>
-        <image name="refresh.png" width="148" height="148"/>
         <image name="shutter.png" width="71" height="80"/>
         <image name="switchCam.png" width="50" height="50"/>
     </resources>

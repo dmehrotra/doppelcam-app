@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  doppel-cam
 //
-//  Created by Dhruv on 3/17/16.
+//  Created by Dhruv and Melanie on 3/17/16.
 //  Copyright © 2016 Dhruv. All rights reserved.
 //
 
@@ -15,11 +15,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var pickedImage = UIImage()
     var newMedia: Bool?
     var stillImageOutput = AVCaptureStillImageOutput()
-    
+    var task:NSURLSessionTask?
     let camera = AVCaptureSession();
     var device : AVCaptureDevice?
     
     override func viewDidLoad() {
+        print("The view has loaded")
         super.viewDidLoad()
         camera.sessionPreset = AVCaptureSessionPresetLow
         let devices = AVCaptureDevice.devices()
@@ -36,16 +37,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    @IBAction func unwindToVC(segue: UIStoryboardSegue) {
+        print("HELLO")
+    }
+    
     
 
  
     
     
     func beginSession(){
-     
+        print("The session has begun")
+        
         do {
             try camera.addInput(AVCaptureDeviceInput(device:device));
+            
         }catch let error as NSError{
+            print("error attaching camera:")
             print(error);
         }
         
@@ -57,30 +65,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if camera.canAddOutput(stillImageOutput) {
             camera.addOutput(stillImageOutput)
         }
+        print("the camera is now working")
         camera.startRunning();
     }
     
-    func refresh() {
-        pickedImage = UIImage()
-        imageView.image = nil
-        camera.sessionPreset = AVCaptureSessionPresetLow
-        let devices = AVCaptureDevice.devices()
-        
-        for d in devices {
-            if (d.hasMediaType(AVMediaTypeVideo)){
-                if(d.position == AVCaptureDevicePosition.Back){
-                    device = d as? AVCaptureDevice;
-                }
+    @IBAction func refresh(sender: AnyObject) {
+        callRefresh()
+    }
+    func callRefresh(){
+        self.imageView.image = nil
+        self.pickedImage = UIImage()
+
+        self.task?.cancel()
+
+        if let inpts = self.camera.inputs as? [AVCaptureDeviceInput]{
+            for input in inpts {
+                self.camera.removeInput(input)
             }
         }
-        if device != nil {
-            beginSession();
-        }
-
-
         
-        
+
+        self.viewDidLoad()
+        self.viewWillAppear(false)
     }
+
     @IBAction func useCamera(sender: AnyObject) {
         
     
@@ -168,10 +176,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
         print("request.HTTPBody:")
         
-        let task = session.dataTaskWithRequest(request, completionHandler: { data, response, error in
+        self.task = session.dataTaskWithRequest(request, completionHandler: { data, response, error in
             
-            print("error:")
-            print(error)
+            guard data != nil else{
+               
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.callRefresh()
+                })
+                print("http error")
+                return
+            }
+           
             
             let strData = String(data: data!, encoding: NSUTF8StringEncoding);
             print("we're complete: ")
@@ -196,7 +211,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             
         })
-        task.resume() // this is needed to start the task
+        self.task?.resume() // this is needed to start the task
     
     }
     func convertStringToDictionary(text: String) -> [String:String]? {
