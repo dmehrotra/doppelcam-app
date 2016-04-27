@@ -17,13 +17,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var stillImageOutput = AVCaptureStillImageOutput()
     var task:NSURLSessionTask?
     let camera = AVCaptureSession();
+    let screenWidth = UIScreen.mainScreen().bounds.size.width
     var device : AVCaptureDevice?
+    var previewLayer = AVCaptureVideoPreviewLayer(session: nil);
+    
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+
+    
+    
     
     override func viewDidLoad() {
         print("The view has loaded")
         super.viewDidLoad()
         camera.sessionPreset = AVCaptureSessionPresetLow
         let devices = AVCaptureDevice.devices()
+        
         
         for d in devices {
             if (d.hasMediaType(AVMediaTypeVideo)){
@@ -38,18 +52,50 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func unwindToVC(segue: UIStoryboardSegue) {
-        print("HELLO")
+        print("Refresh to camera")
+        self.callRefresh()
+        
     }
     
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touchPoint = touches.first! as UITouch
+        let screenSize = UIScreen.mainScreen().bounds.size
+        let mathX = touchPoint.locationInView(self.view).y / screenSize.height
+        let mathY = touchPoint.locationInView(self.view).x / screenSize.width
+        let focusPoint = CGPoint(x: mathX, y: mathY)
+        
+            do{
+                if let dev = device {
+                    try dev.lockForConfiguration()
+                    if dev.focusPointOfInterestSupported {
+                        dev.focusPointOfInterest = focusPoint
+                        dev.focusMode = AVCaptureFocusMode.AutoFocus
+                        dev.exposurePointOfInterest = focusPoint
+                        dev.exposureMode = AVCaptureExposureMode.ContinuousAutoExposure
+                        print(focusPoint)
+                    }
+                    if dev.exposurePointOfInterestSupported {
+                        dev.exposurePointOfInterest = focusPoint
+                        dev.exposureMode = AVCaptureExposureMode.AutoExpose
+                    }
+                    dev.unlockForConfiguration()
+            
+                }
+            }catch _{
+                print("bigerror")
+            }
 
- 
+    }
+    
+
     
     
     func beginSession(){
         print("The session has begun")
         
         do {
+            configureDevice()
             try camera.addInput(AVCaptureDeviceInput(device:device));
             
         }catch let error as NSError{
@@ -57,7 +103,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print(error);
         }
         
-        let previewLayer = AVCaptureVideoPreviewLayer(session: camera);
+        previewLayer = AVCaptureVideoPreviewLayer(session: camera);
         self.view.layer.addSublayer(previewLayer);
         previewLayer?.frame = self.view.layer.frame
         previewLayer?.zPosition = -1
@@ -72,6 +118,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func refresh(sender: AnyObject) {
         callRefresh()
     }
+    func configureDevice() {
+        do{
+            if let dev = device {
+                try dev.lockForConfiguration()
+                dev.focusMode = AVCaptureFocusMode.AutoFocus
+                dev.unlockForConfiguration()
+            }
+        }catch _{
+            print("error configuring device and 9/11 was an inside job btw")
+        }
+    }
+    
+    
+ 
+    
+    
     func callRefresh(){
         self.imageView.image = nil
         self.pickedImage = UIImage()
@@ -255,5 +317,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         DestViewController.chosenImage = pickedImage
     
     }
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
 }
 

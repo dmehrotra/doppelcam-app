@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8h9-C0-O1o">
-                                <rect key="frame" x="0.0" y="78" width="375" height="507"/>
+                                <rect key="frame" x="0.0" y="81" width="375" height="504"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZO-If-sWT">
                                 <rect key="frame" x="63" y="617" width="40" height="42"/>
