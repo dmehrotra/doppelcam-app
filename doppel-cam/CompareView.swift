@@ -14,12 +14,21 @@ class Compare:UIViewController{
     @IBOutlet weak var doppelPic: UIImageView!
     
     @IBOutlet weak var chosenPic: UIImageView!
+    
+    var doppelImage = UIImage()
+    var chosenImage = UIImage()
+
+    override func viewDidLoad() {
+        doppelPic.image = doppelImage
+        chosenPic.image = chosenImage
+        
+    }
     @IBAction func shareToFacebook(){
         let shareToFacebook: SLComposeViewController =
         SLComposeViewController(forServiceType:
-        SLServiceTypeFacebook)
+            SLServiceTypeFacebook)
         shareToFacebook.setInitialText(<#T##text: String!##String!#>)
-        
+        shareToFacebook.addImage(<#T##image: UIImage!##UIImage!#>)
         self.presentViewController(shareToFacebook, animated: true, completion: nil)
     }
     @IBAction func shareToTwitter(){
@@ -29,15 +38,7 @@ class Compare:UIViewController{
         self.presentViewController(shareToTwitter, animated: true, completion: nil)
         
     }
-    var doppelImage = UIImage()
-    var chosenImage = UIImage()
 
-    override func viewDidLoad() {
-        doppelPic.image = doppelImage
-        chosenPic.image = chosenImage
-        
-    }
-    
     func takeScreenshot(view: UIView) -> UIImageView {
         UIGraphicsBeginImageContext(view.frame.size)
         view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
