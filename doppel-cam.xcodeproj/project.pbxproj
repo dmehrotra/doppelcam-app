@@ -14,6 +14,7 @@
 		9A59BCD81C9B24F700806960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A59BCD61C9B24F700806960 /* LaunchScreen.storyboard */; };
 		9A59BCE31C9B24F700806960 /* doppel_camTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59BCE21C9B24F700806960 /* doppel_camTests.swift */; };
 		9A59BCEE1C9B24F700806960 /* doppel_camUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A59BCED1C9B24F700806960 /* doppel_camUITests.swift */; };
+		9A862B701CD531D300C66150 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A862B6F1CD531D300C66150 /* Social.framework */; };
 		9AA526ED1CC02350007EDC65 /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA526EC1CC02350007EDC65 /* CompareView.swift */; };
 		9AE3631B1CBE93C8008DD539 /* switchCam.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AE3631A1CBE93C8008DD539 /* switchCam.png */; };
 		9AE3631D1CBE93CF008DD539 /* shutter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AE3631C1CBE93CF008DD539 /* shutter.png */; };
@@ -59,6 +60,7 @@
 		9A59BCE91C9B24F700806960 /* doppel-camUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "doppel-camUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A59BCED1C9B24F700806960 /* doppel_camUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doppel_camUITests.swift; sourceTree = "<group>"; };
 		9A59BCEF1C9B24F700806960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A862B6F1CD531D300C66150 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		9AA526EC1CC02350007EDC65 /* CompareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
 		9AE3631A1CBE93C8008DD539 /* switchCam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switchCam.png; sourceTree = "<group>"; };
 		9AE3631C1CBE93CF008DD539 /* shutter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shutter.png; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A862B701CD531D300C66150 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +104,7 @@
 		9A59BCC11C9B24F600806960 = {
 			isa = PBXGroup;
 			children = (
+				9A862B6F1CD531D300C66150 /* Social.framework */,
 				9A59BCCC1C9B24F600806960 /* doppel-cam */,
 				9A59BCE11C9B24F700806960 /* doppel-camTests */,
 				9A59BCEC1C9B24F700806960 /* doppel-camUITests */,
