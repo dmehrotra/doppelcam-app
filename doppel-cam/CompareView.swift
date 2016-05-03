@@ -17,37 +17,39 @@ class Compare:UIViewController{
     
     var doppelImage = UIImage()
     var chosenImage = UIImage()
-
+    var composite = UIImage()
     override func viewDidLoad() {
         doppelPic.image = doppelImage
         chosenPic.image = chosenImage
         
     }
     @IBAction func shareToFacebook(){
-//        let shareToFacebook: SLComposeViewController =
-//        SLComposeViewController(forServiceType:
-//            SLServiceTypeFacebook)
-////        shareToFacebook.setInitialText(String!)
-////        shareToFacebook.addImage(UIImage!)
-//        
-//        self.presentViewController(shareToFacebook, animated: true, completion: nil)
         takeScreenshot();
+        let shareToFacebook: SLComposeViewController =
+        SLComposeViewController(forServiceType:
+            SLServiceTypeFacebook)
+     
+        shareToFacebook.addImage(composite)
+        
+        self.presentViewController(shareToFacebook, animated: true, completion: nil)
+        
     }
     @IBAction func shareToTwitter(){
+        takeScreenshot();
         let shareToTwitter: SLComposeViewController =
         SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-        
+        shareToTwitter.addImage(composite)
         self.presentViewController(shareToTwitter, animated: true, completion: nil)
         
     }
 
     func takeScreenshot() {
     
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(500,600), false, 0);
-        self.view.drawViewHierarchyInRect(CGRectMake(50,-50,view.bounds.size.width,view.bounds.size.height), afterScreenUpdates: true)
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(375,450), false, 0);
+        self.view.drawViewHierarchyInRect(CGRectMake(0,-150,view.bounds.size.width,view.bounds.size.height), afterScreenUpdates: true)
         
-        chosenImage = UIGraphicsGetImageFromCurrentImageContext();
-        chosenPic.image = chosenImage
+        composite = UIGraphicsGetImageFromCurrentImageContext();
+        
     }
     
     
