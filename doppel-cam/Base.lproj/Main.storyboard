@@ -100,29 +100,20 @@
                                     <segue destination="sb9-Ss-H0s" kind="unwind" unwindAction="unwindToVC:" id="zsO-sv-5dW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvY-3p-m9g">
-                                <rect key="frame" x="253" y="617" width="42" height="30"/>
-                                <state key="normal" title="Twitte">
-                                    <color key="titleColor" red="1" green="0.56872114201270763" blue="0.83776993827329593" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbL-IV-RhK">
-                                <rect key="frame" x="253" y="617" width="42" height="30"/>
-                                <state key="normal" title="Twitte">
-                                    <color key="titleColor" red="1" green="0.56872114200000001" blue="0.83776993830000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="shareToTwitter" destination="SQJ-Bq-HjM" eventType="touchUpInside" id="JpQ-aE-RRC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjQ-95-VMC">
-                                <rect key="frame" x="30" y="617" width="67" height="30"/>
-                                <state key="normal" title="Facebook">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjQ-95-VMC">
+                                <rect key="frame" x="316" y="550" width="59" height="44"/>
+                                <state key="normal" image="facebook.png">
                                     <color key="titleColor" red="0.8434197352927485" green="0.86447364604967758" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="shareToFacebook" destination="SQJ-Bq-HjM" eventType="touchUpInside" id="1U8-IY-5XT"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvY-3p-m9g">
+                                <rect key="frame" x="321" y="611" width="48" height="36"/>
+                                <state key="normal" image="twitter.png">
+                                    <color key="titleColor" red="1" green="0.56872114201270763" blue="0.83776993827329593" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -141,10 +132,12 @@
     <resources>
         <image name="camera.png" width="200" height="200"/>
         <image name="compare.png" width="90" height="66"/>
+        <image name="facebook.png" width="200" height="150"/>
         <image name="noflash.png" width="144" height="151"/>
         <image name="photogallery.png" width="161" height="161"/>
         <image name="shutter.png" width="71" height="80"/>
         <image name="switchCam.png" width="50" height="50"/>
+        <image name="twitter.png" width="200" height="150"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
