@@ -21,10 +21,11 @@ class Compare:UIViewController{
     override func viewDidLoad() {
         doppelPic.image = doppelImage
         chosenPic.image = chosenImage
+        takeScreenshot();
         
     }
     @IBAction func shareToFacebook(){
-        takeScreenshot();
+        
         let shareToFacebook: SLComposeViewController =
         SLComposeViewController(forServiceType:
             SLServiceTypeFacebook)
@@ -35,7 +36,7 @@ class Compare:UIViewController{
         
     }
     @IBAction func shareToTwitter(){
-        takeScreenshot();
+    
         let shareToTwitter: SLComposeViewController =
         SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         shareToTwitter.addImage(composite)
