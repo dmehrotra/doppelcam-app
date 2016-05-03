@@ -24,12 +24,14 @@ class Compare:UIViewController{
         
     }
     @IBAction func shareToFacebook(){
-        let shareToFacebook: SLComposeViewController =
-        SLComposeViewController(forServiceType:
-            SLServiceTypeFacebook)
-        shareToFacebook.setInitialText(<#T##text: String!##String!#>)
-        shareToFacebook.addImage(<#T##image: UIImage!##UIImage!#>)
-        self.presentViewController(shareToFacebook, animated: true, completion: nil)
+//        let shareToFacebook: SLComposeViewController =
+//        SLComposeViewController(forServiceType:
+//            SLServiceTypeFacebook)
+////        shareToFacebook.setInitialText(String!)
+////        shareToFacebook.addImage(UIImage!)
+//        
+//        self.presentViewController(shareToFacebook, animated: true, completion: nil)
+        takeScreenshot();
     }
     @IBAction func shareToTwitter(){
         let shareToTwitter: SLComposeViewController =
@@ -39,15 +41,13 @@ class Compare:UIViewController{
         
     }
 
-    func takeScreenshot(view: UIView) -> UIImageView {
-        UIGraphicsBeginImageContext(view.frame.size)
-        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    func takeScreenshot() {
+    
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(500,600), false, 0);
+        self.view.drawViewHierarchyInRect(CGRectMake(50,-50,view.bounds.size.width,view.bounds.size.height), afterScreenUpdates: true)
         
-
-        return UIImageView(image: image)
+        chosenImage = UIGraphicsGetImageFromCurrentImageContext();
+        chosenPic.image = chosenImage
     }
     
     
